@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Tipo de Triângulo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 0.5; /* Ajuste o valor conforme necessário */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Verificar Tipo de Triângulo</h1>
+        <label for="lado1">Lado 1:</label>
+        <input type="number" id="lado1" placeholder="Insira o valor do lado 1">
+
+        <label for="lado2">Lado 2:</label>
+        <input type="number" id="lado2" placeholder="Insira o valor do lado 2">
+
+        <label for="lado3">Lado 3:</label>
+        <input type="number" id="lado3" placeholder="Insira o valor do lado 3">
+
+        <button onclick="verificarTriangulo()">Verificar</button>
+
+        <div class="result" id="resultado"></div>
+    </div>
+
+    <div class="footer">
+        <p>Universidade Federal de Sergipe</p>
+        <p>Centro de Ciências Exatas e Tecnologia</p>
+        <p>Departamento de Computação</p>
+        <p>Enzo Libório Fraga</p>
+        <p>enzoliborio@academico.ufs.br</p>
+        <p>Aracaju 2022</p>
+    </div>
+
+    <script>
+        const verificarTriangulo = () => {
+            // Obtém os valores dos campos de entrada
+            const lado1 = parseFloat(document.getElementById('lado1').value);
+            const lado2 = parseFloat(document.getElementById('lado2').value);
+            const lado3 = parseFloat(document.getElementById('lado3').value);
+
+            // Função para verificar se os lados formam um triângulo
+            const existeTriangulo = (Lado1, Lado2, Lado3) => {
+                return Lado1 < (Lado2 + Lado3) &&
+                       Lado2 < (Lado1 + Lado3) &&
+                       Lado3 < (Lado1 + Lado2);
+            };
+
+            // Função para, caso os lados formem um triângulo, saber qual seu tipo
+            const tipoTriangulo = (Lado1, Lado2, Lado3) => {
+                if (Lado1 === Lado2 && Lado2 === Lado3) return 'equilátero';
+                else if (Lado1 !== Lado2 &&
+                        Lado2 !== Lado3 && 
+                        Lado1 !== Lado3) return 'escaleno';
+                else return 'isósceles';
+            };
+
+            // Resultado
+            const resultadoDiv = document.getElementById('resultado');
+            if (existeTriangulo(lado1, lado2, lado3)) {
+                const tipo = tipoTriangulo(lado1, lado2, lado3);
+                resultadoDiv.innerText = `Os lados formam um triângulo ${tipo}.`;
+            } else {
+                resultadoDiv.innerText = 'Os lados não formam um triângulo.';
+            }
+        };
+    </script>
+</body>
+</html>
