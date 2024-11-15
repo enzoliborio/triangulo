@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Ubuntu, sans-serif;
     margin: 20px;
 }
 
@@ -9,61 +9,106 @@ h1 {
     font-size: 30px;
 }
 
+h2 {
+    font-size: 20px;
+    margin-top: 0;
+    font-weight: normal;
+    font-family: "Ubuntu Light", sans-serif;
+}
+
 .container {
     max-width: 400px;
-    margin: 0 auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em uma coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
 }
 
 label {
     display: block;
     margin-top: 10px;
-
+    font-family: Ubuntu,sans-serif;
 }
 
 input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+    width: 45%; /* Mantém o tamanho pequeno */
+    padding: 8px 15px; /* Altura */
+    margin-top: 5px; /* margem do topo */
+    border-radius: 9px; /* Efeito arredondado */
+    border: 0.12em solid #ffffff;
+    background-color: #e3e4e5;
+    font-size: 16px;
+    font-kerning: center;
+    font-family: "Ubuntu Light", sans-serif;
 }
 
 button {
     margin-top: 10px;
-    padding: 10px 15px;
-    font-size: 16px;
+    padding: 6px 15px;
+    font-size: 12px;
     cursor: pointer;
+    border-radius: 100px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-family: "Ubuntu Light", sans-serif;
 }
 
 .result {
     margin-top: 20px;
+    margin-bottom: 20px;
     font-weight: bold;
-}
-
-
-.imagem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .imagem-centralizada {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
     height: 100px;
     border-radius: 100px;
 }
 
+.imagem-logo-ufs{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    height: 150px;
+}
+
 .meu-nome {
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0;
     line-height: 5px;
     margin-bottom: 30px;
     font-weight: bold;
 }
 
 .footer {
-    margin-top: 0px;
+    margin-top: 0;
     text-align: center;
     font-size: 14px;
     line-height: 0.4;
+}
+
+.sobre-link {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 0.4;
+}
+
+.botão-link {
+    display: block; /* Torna o botão um elemento de bloco */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 6px 15px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    text-align: center;
+    font-family: "Ubuntu Light", sans-serif;
 }
