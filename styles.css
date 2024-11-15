@@ -44,8 +44,8 @@ input {
 
 button {
     margin-top: 10px;
-    padding: 6px 15px;
-    font-size: 12px;
+    padding: 8px 15px;
+    font-size: 14px;
     cursor: pointer;
     border-radius: 100px;
     background-color: #007BFF;
@@ -102,8 +102,8 @@ button {
 .botão-link {
     display: block; /* Torna o botão um elemento de bloco */
     margin: 0 auto; /* Centraliza horizontalmente */
-    padding: 6px 15px;
-    font-size: 12px;
+    padding: 8px 15px;
+    font-size: 14px;
     cursor: pointer;
     border-radius: 100px;
     background-color: #007BFF;
