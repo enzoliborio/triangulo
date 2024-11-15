@@ -9,26 +9,33 @@
 <body>
 <div class="container">
     <h1>Verificar Tipo de Triângulo</h1>
+    <h2>Digite os valores de cada um dos três lados do triângulo:</h2>
     <label for="lado1">Lado 1:</label>
-    <input type="number" id="lado1" placeholder="Insira o valor do lado 1">
+    <input type="number" id="lado1" placeholder="Insira o valor do lado 1" inputmode="numeric"
+           pattern="[0-9]*">
 
     <label for="lado2">Lado 2:</label>
-    <input type="number" id="lado2" placeholder="Insira o valor do lado 2">
+    <input type="number" id="lado2" placeholder="Insira o valor do lado 2" inputmode="numeric"
+           pattern="[0-9]*">
 
     <label for="lado3">Lado 3:</label>
-    <input type="number" id="lado3" placeholder="Insira o valor do lado 3">
+    <input type="number" id="lado3" placeholder="Insira o valor do lado 3" inputmode="numeric"
+           pattern="[0-9]*">
 
     <button onclick="verificarTriangulo()">Verificar</button>
 
     <div class="result" id="resultado"></div>
+
 </div>
 
-<img src="enzo.jpeg" alt="Enzo" class="imagem-centralizada">
+<img src="enzo.jpeg" alt="Foto de Enzo Libório" class="imagem-centralizada">
 
 <div class="meu-nome">
     <p>Enzo Libório Fraga<p>
     <p>enzoliborio@academico.ufs.br<p>
 </div>
+
+<img src="ufs_vertical_positiva.png" alt="Imagem do brasão da Universidade de Sergipe" class="imagem-logo-ufs"></img>
 
 <div class="footer">
     <p>Universidade Federal de Sergipe</p>
@@ -36,6 +43,17 @@
     <p>Departamento de Computação</p>
     <p>Aracaju 2024</p>
 </div>
+
+<div class="sobre-link">
+    <p>Confira o repositório do site no GitHub e saiba mais:</p>
+</div>
+
+<button class="botão-link" onclick="window.open('https://github.com/enzoliborioo/triangulo')">Clique aqui</button>
+
+<div class="link">
+    <a href="https://enzoliborioo.github.io/triangulo/"
+</div>
+
 
 <script src="script.js"></script>
 </body>
